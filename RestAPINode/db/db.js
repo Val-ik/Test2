@@ -3,6 +3,7 @@
 const collections = {
     todos: require('./todos'),
     users: require('./users'),
+	equipment: require('./equipment')
 }
 
 // funciones de utileria
@@ -21,6 +22,7 @@ function getLastId(collection) {
 
 // representa un SELECT de SQL
 // TODO: tercer parametro es demasiado especifico, deberia ser un objeto que represente filtros adicionales
+//function select(collection, id, userId) {
 function select(collection, id, userId) {
     let data = collections[collection].data
     if(id) {
