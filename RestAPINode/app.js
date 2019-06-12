@@ -29,11 +29,11 @@ app.use('/users/:userId/todos', (req, res, next) => { // operaciones hacia el re
     next()
 }, todosRouter)
 app.use('/todos', todosRouter) // operaciones hacia el recurso de 'tareas'
-app.use('/users/:userId/equipment', (req, res, next) => { // operaciones hacia el recurso de 'equipo' del 'usuario'
+/*app.use('/users/:userId/equipment', (req, res, next) => { // operaciones hacia el recurso de 'equipo' del 'usuario'
     let userId = parseInt(req.params.userId)
     req.body.userId = userId
     next()
-}, equipmentRouter)
+}, equipmentRouter)*/
 app.use('/equipment', equipmentRouter) // operaciones hacia el recurso de 'equipo'
 
 module.exports = app
